@@ -63,8 +63,23 @@ img[src$=".png"] {
 
 .icon-block {
 	padding: 0 15px;
+	cursor: auto;
+	/* Reset .btn style */
+	height: auto;
+	background-color: initial !important;
+	z-index: 0;
+}
+
+.icon-block.openModal {
+	cursor: pointer;
 }
 
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+/* Remove scroll on the body when react-modal is open */
+
+.ReactModal__Body--open {
+	overflow: hidden;
 }
